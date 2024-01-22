@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="about">
+            <div class="empty"></div>
+            <article>
+                <div class="title">
+                    <h1>FILIPPOS PAPAGEORGIOU</h1>
+                </div>
+                <div class="description">
+                    <p>Hi!👋 A few words about me: The university i am currently studying at was my first choice
+                         when deciding my academic future and that is why 
+                         I have a great will to learn and evolve. I take pride being hardworking and consistent,
+                         fostering a team spirit, and being communicative and cooperative. These qualities 
+                         reflect my commitment to collaboration and my dedication to personal and academic development.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="services" class="service service-html sticky">
+            <article>
+                <figure>
+                    <img src="img/diamond.png" width="200" />
+                </figure>
+                <div class="text">
+                    <h2>EDUCATION</h2>
+                    <div class="education-detail">
+                        <h5>University of Western Attica, Aegaleo</h5>
+                        <p><strong>School of Computer Engineering and Information Technology</strong><br>
+                           Oct 2021 - Oct 2026</p>
+                        <p><strong>Programming Languages:</strong><br>
+                           C, C++, Python, JAVA (Swing, AWT, JavaFX), SQL, HTML, CSS, JavaScript</p>
+                        <p><strong>Additional Courses:</strong><br>
+                           Computer Networks, Algorithms and Complexity, Operating Systems, Data Structures, English Proficiency</p>
+                    </div>
+                    <div class="education-detail">
+                        <h5>Aristotle Corinthian School, Corinth, Greece</h5>
+                        <p>Graduating Grade: 19</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="service service-css sticky">
+            <article>
+                <figure>
+                    <img src="img/triangle.png" width="200" />
+                </figure>
+                <div class="text">
+                    <h2>Professional experience</h2>
+                    <p> MANAGEMENT AND INSTALLATION 
+                        OF AN ORDERING SYSTEM 
+                        Simple Live IN  RETAIL STORE 
+                        Sept 2022 - Today </p>
+                        <p>
+                        BARISTA Apr 2021 - Today
+                        TAILOR MADE COFFEE ROASTERS, ATHENS</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="service service-js sticky">
+            <article>
+                <figure>
+                    <img src="img/octagon.png" width="200" />
+                </figure>
+                <div class="text">
+                    <h2>PERSONAL INFO</h2>
+                    <p> Date of birth
+                        19 June 2003
+                        Place of birth
+                        ATHENS </p>
+                        
+                        <p>Driving licence
+                        YES
+                        Gender
+                        Male
+                        Nationality
+                        GREEK
+                        Maried status
+                        Unmarried</p>
+                        
+                        <h3>USEFUL LINKS</h3>
+                        <p>
+                        <a href="https://www.linkedin.com/in/filipe-papageorgiou-55491b27b/">LinkedIn</a>
+                        </p>
+                        <p>
+                        <a href="https://github.com/Filippospapageorgiou">Github</a>
+                        </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact" class="contact full-screen">
+            <a href="mailto:filpap9@gmail.com">CONTACT ME</a>
+        </section>
+
+        <script>
+
+            let emptyElement = document.querySelector('.about .empty');
+            let titleElement = document.querySelector('.about .title');
+
+            let figureElements = document.querySelectorAll('.service figure');
+
+
+            window.addEventListener( 'mousemove', handleMouseMove);
+
+            function handleMouseMove( event ) {
+
+                emptyElement.style.flexBasis = event.clientX + 'px';
+                titleElement.style.flexBasis = event.clientY / 2 + 'px';
+
+                figureElements.forEach( function( element ) {
+                    element.style.flexBasis = (window.innerWidth - event.clientX) + 'px';
+                } );
+            }
+
+        </script>
+
+    </body>
+</html>
